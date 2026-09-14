@@ -1,7 +1,7 @@
 /* =========================================================
    SHEAMART WEBSITE
    Main Stylesheet
-   Created by Sagar Khatri
+   Created by Syed Taqi
    ========================================================= */
 
 
@@ -346,7 +346,7 @@ nav a.active {
     transform: translateY(-4px);
 
     box-shadow:
-        0 14px 28px rgba(23, 107, 69, 0.28);
+        0 14px 28px rgba(23, 107, 69, 0.28); 
 }
 
 
@@ -1820,4 +1820,458 @@ footer > p {
         font-size: 32px;
     }
 
+}
+
+/* =========================================================
+   JAVASCRIPT FEATURE SPRINT (WEEK 10B)
+   Header actions, search, cart badge, form status,
+   feedback section, and dark mode
+   ========================================================= */
+
+
+/* HEADER ACTIONS (Welcome + Dark Mode buttons) */
+
+.header-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.icon-btn {
+
+    width: 42px;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: var(--light-green);
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+
+.icon-btn:hover {
+
+    background: var(--green);
+
+    transform: translateY(-2px);
+}
+
+
+/* SEARCH RESULT TEXT + CART BADGE */
+
+.search-result {
+
+    max-width: 700px;
+
+    margin: 12px auto 0;
+
+    text-align: center;
+
+    color: var(--text);
+
+    font-size: 14px;
+}
+
+
+.cart-badge {
+
+    max-width: 700px;
+
+    margin: 14px auto 0;
+
+    text-align: center;
+
+    background: var(--light-green);
+
+    color: var(--dark-green);
+
+    font-weight: 700;
+
+    padding: 10px;
+
+    border-radius: 10px;
+}
+
+
+/* CONTACT FORM STATUS MESSAGE */
+
+.form-status {
+
+    margin-top: -10px;
+
+    margin-bottom: 15px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    min-height: 0;
+}
+
+
+.form-error {
+
+    color: #c0392b;
+}
+
+
+.form-success {
+
+    color: var(--green);
+}
+
+
+/* CUSTOMER FEEDBACK SECTION */
+
+.feedback-section {
+
+    max-width: 700px;
+
+    margin: 0 auto 90px;
+
+    padding: 0 20px;
+}
+
+
+.feedback-box {
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 22px;
+
+    box-shadow: var(--large-shadow);
+
+    border: 1px solid var(--border);
+
+    text-align: center;
+}
+
+
+.feedback-box h2 {
+
+    font-family: 'Poppins', sans-serif;
+
+    color: var(--dark-green);
+
+    font-size: 27px;
+
+    margin-bottom: 5px;
+}
+
+
+.feedback-box > p:not(.section-label) {
+
+    color: var(--text);
+
+    margin-bottom: 25px;
+}
+
+
+.feedback-controls {
+
+    display: flex;
+
+    gap: 12px;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+
+.feedback-controls select {
+
+    padding: 12px 15px;
+
+    border: 1px solid #d7e2da;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    background: #fbfdfc;
+
+    color: var(--dark);
+}
+
+
+.feedback-controls button {
+
+    border: none;
+
+    padding: 12px 22px;
+
+    background: var(--green);
+
+    color: white;
+
+    font-weight: 700;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.feedback-controls button:hover {
+
+    background: var(--dark-green);
+}
+
+
+#feedback {
+
+    margin-top: 18px;
+
+    font-weight: 700;
+}
+
+
+.feedback-positive {
+
+    color: var(--green);
+}
+
+
+.feedback-neutral {
+
+    color: var(--gold);
+}
+
+
+.feedback-negative {
+
+    color: #c0392b;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+body.dark-mode {
+
+    background: #101c16;
+
+    color: #c7d6cd;
+}
+
+
+body.dark-mode .header,
+body.dark-mode .search-box,
+body.dark-mode .product-card,
+body.dark-mode .category-card,
+body.dark-mode .feature,
+body.dark-mode .about-box,
+body.dark-mode .information-card,
+body.dark-mode .user-card,
+body.dark-mode .status-card,
+body.dark-mode form,
+body.dark-mode .feedback-box {
+
+    background: #16261f;
+
+    border-color: #24382f;
+}
+
+
+body.dark-mode .hero,
+body.dark-mode .page-banner {
+
+    background:
+        linear-gradient(
+            135deg,
+            #16261f,
+            #101c16
+        );
+
+    border-color: #24382f;
+}
+
+
+body.dark-mode .cta {
+
+    background: #182a21;
+}
+
+
+body.dark-mode .product-image {
+
+    background:
+        linear-gradient(
+            135deg,
+            #1c2e25,
+            #16261f
+        );
+}
+
+
+body.dark-mode .large-icon,
+body.dark-mode .contact-icon,
+body.dark-mode .cart-badge,
+body.dark-mode .icon-btn {
+
+    background: #1f342a;
+}
+
+
+body.dark-mode .cart-badge {
+
+    color: #7fe3ab;
+}
+
+
+body.dark-mode .cart-button {
+
+    background: #1f342a;
+
+    color: #7fe3ab;
+}
+
+
+body.dark-mode .cart-button:hover {
+
+    background: var(--green);
+
+    color: white;
+}
+
+
+body.dark-mode .icon-btn {
+
+    color: #eef6f1;
+}
+
+
+body.dark-mode nav a {
+
+    color: #c7d6cd;
+}
+
+
+body.dark-mode nav a:hover {
+
+    background: #1f342a;
+
+    color: #7fe3ab;
+}
+
+
+body.dark-mode nav a.active {
+
+    background: var(--green);
+
+    color: white;
+}
+
+
+body.dark-mode .logo {
+
+    color: #eef6f1;
+}
+
+
+body.dark-mode .logo span {
+
+    color: #4fd992;
+}
+
+
+body.dark-mode .section-label {
+
+    color: #4fd992;
+}
+
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode .product-content h3,
+body.dark-mode .product-bottom strong,
+body.dark-mode .contact-item h3,
+body.dark-mode .user-card h3,
+body.dark-mode .status-card h3,
+body.dark-mode .page-banner h1,
+body.dark-mode .feedback-box h2 {
+
+    color: #eef6f1;
+}
+
+
+body.dark-mode p,
+body.dark-mode .product-content p,
+body.dark-mode .user-card p,
+body.dark-mode .status-card p,
+body.dark-mode .contact-item p,
+body.dark-mode .page-banner > p:last-child,
+body.dark-mode form > p,
+body.dark-mode .about-box p,
+body.dark-mode .information-card p,
+body.dark-mode .feedback-box > p:not(.section-label) {
+
+    color: #a9bcb2;
+}
+
+
+body.dark-mode .hero-content > p:not(.hero-small) {
+
+    color: #a9bcb2;
+}
+
+
+body.dark-mode form label {
+
+    color: #eef6f1;
+}
+
+
+body.dark-mode form input,
+body.dark-mode form textarea,
+body.dark-mode .search-box > input,
+body.dark-mode .feedback-controls select {
+
+    background: #101c16;
+
+    border-color: #24382f;
+
+    color: #eef6f1;
+}
+
+
+body.dark-mode .search-result {
+
+    color: #a9bcb2;
+}
+
+
+body.dark-mode footer {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0a1911,
+            #0d2015
+        );
 }
