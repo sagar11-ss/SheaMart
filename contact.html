@@ -43,6 +43,18 @@
 
         </nav>
 
+        <div class="header-actions">
+
+            <button class="icon-btn" onclick="welcomeUser()" title="Welcome message">
+                👋
+            </button>
+
+            <button class="icon-btn" id="darkModeBtn" onclick="toggleDarkMode()" title="Toggle dark mode">
+                🌙
+            </button>
+
+        </div>
+
     </header>
 
 
@@ -147,7 +159,7 @@
 
         <!-- CONTACT FORM -->
 
-        <form>
+        <form id="contactForm" onsubmit="return validateForm()" novalidate>
 
             <h2>Send Us a Message</h2>
 
@@ -208,11 +220,51 @@
             ></textarea>
 
 
+            <p id="formStatus" class="form-status"></p>
+
             <button type="submit">
                 Send Message →
             </button>
 
         </form>
+
+    </section>
+
+
+    <!-- CUSTOMER FEEDBACK -->
+
+    <section class="feedback-section">
+
+        <div class="feedback-box">
+
+            <p class="section-label">
+                SHARE YOUR EXPERIENCE
+            </p>
+
+            <h2>Customer Feedback</h2>
+
+            <p>
+                How would you rate your experience with SheaMart?
+            </p>
+
+            <div class="feedback-controls">
+
+                <select id="rating">
+                    <option>Excellent</option>
+                    <option>Good</option>
+                    <option>Average</option>
+                    <option>Poor</option>
+                </select>
+
+                <button onclick="showRating()">
+                    Submit Feedback
+                </button>
+
+            </div>
+
+            <p id="feedback"></p>
+
+        </div>
 
     </section>
 
@@ -244,6 +296,8 @@
 
     </footer>
 
+
+    <script src="script.js"></script>
 
 </body>
 
