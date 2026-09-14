@@ -41,6 +41,18 @@
 
         </nav>
 
+        <div class="header-actions">
+
+            <button class="icon-btn" onclick="welcomeUser()" title="Welcome message">
+                👋
+            </button>
+
+            <button class="icon-btn" id="darkModeBtn" onclick="toggleDarkMode()" title="Toggle dark mode">
+                🌙
+            </button>
+
+        </div>
+
     </header>
 
 
@@ -70,13 +82,21 @@
 
             <input
                 type="text"
+                id="searchInput"
                 placeholder="Search products..."
+                onkeyup="if(event.key === 'Enter'){ searchProducts(); }"
             >
 
-            <button>
+            <button onclick="searchProducts()">
                 Search
             </button>
 
+        </div>
+
+        <p id="searchResult" class="search-result"></p>
+
+        <div class="cart-badge">
+            🛒 Cart Items: <span id="cartCount">0</span>
         </div>
 
     </section>
@@ -411,6 +431,8 @@
 
     </footer>
 
+
+    <script src="script.js"></script>
 
 </body>
 
